@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>The Gym-Personal Training-Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="blueberry.css" />
+		<style type="text/css">
+		*{
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}	
+		body{
+			background: #f0f0f0;
+			font: 14px/20px Arial,San-Serif;
+			color: #555;
+			margin: 0;
+		}
+  h1 {
+	text-align: center;
+	font-size: 180%;
+	line-height: 120%;
+	padding: 5% 0;
+   }
+  h2{
+  	text-decoration: underline;
+  	line-height: 280%;
+  	padding-left: 2%;
+  }
+  h3{
+  	line-height: 110%;
+  	padding: 5% 0;
+  }
+  p{
+  	padding: 1%;
+  }
+  img{
+  	text-align: center;
+  	max-width: 100%;
+  	height: auto;
+  	width: auto;
+  }
+  a{
+  	color: #FFF;
+  	text-decoration: none;
+  	font-weight: bold;
+  }
+  a:hover{
+  	color: #FFF;
+  	text-decoration: underline;
+  }
+   header{
+   	background: #405580;
+   	width: 100%;
+   	height: 86px;
+   	position: fixed;
+   	top: 0;
+   	left: 0;
+   	z-index: 100;
+   	opacity: 0.90;
+   }
+   #logo{
+   	margin: 20px;
+   	float: left;
+   	width: 200px;
+   	height: 60px;
+   	background: url(./img/the-gym.png) no-repeat center;
+   }
+   nav{
+   	float: right;
+   	padding: 35px 20px 20px 0;
+   }
+   #menu-icon{
+   	display: hidden;
+   	width: 40px;
+   	height: 40px;
+   	background: url(./img/icon.png) center;
+   }
+   a:hover#menu-icon{
+   	border-radius: 4px 4px 0 0;
+   }
+   ul{
+   	 list-style: none;
+   }
+   nav ul li{
+   	display: inline-block;
+   	float: left;
+   	padding: 10px;
+   }
+   .current{
+   color: #FFF
+   text-decoration:underline;
+   }
+   #doc{
+   	margin: 40 px 0;
+   }
+   #content{
+   	margin: 0 auto;
+   	max-width: 1140px;
+   	margin-top: 110px;
+   }
+   .bluberry{
+   	max-width: 960px;
+   	margin-top: 110px;
+   }
+   section{
+   	width: 29%;
+   	float: left;
+   	margin: 2% 2%;
+   	text-align: center;
+   }
+   .clear{
+   	clear: both;
+   }
+   article{
+   	float: left;
+   	margin:  0 auto;
+   	width: 50%;
+   	height: auto;
+   	padding: 4%;
+   }
+    aside
+    {
+    	float: right;
+    	margin:  0 auto;
+   	    width: 35%;
+   		height: auto;
+   		padding: 3%;
+    }
+    ul.gym li{
+    	padding-left: 3%;
+    }
+    footer{
+    	background: #333333;
+    	width: 100%;
+    	overflow: hidden;
+    	opacity: 0.90%;
+    }
+    footer p, footer h3{
+    	color: #FFF;
+    }
+    footer p a{
+    	color: #FFF;
+    	text-decoration: none;
+    }
+    ul.social li{
+    	display: inline;
+    }
+    ul.social li img{
+    	height: 50px;
+    	
+    }
+    footer.second{
+    	border-top: 1px solid #4D4E50;
+    	background-color: #333333
+    	max-height: 50px;
+    	text-align: center;
+    }
+    /*---------------MEDIA!!!---------------*/
+    @media screen and (max-width: 487px){
+    	body{
+    		position: absolute;
+
+    	}
+    }
+     @media screen and (max-width: 487px){
+     	header{
+     		position: absolute;
+     	}
+     	#menu-icon{
+     		display: inline-block;
+     	}
+     	nav ul, nav:active ul{
+     		display: none;
+     		position: absolute;
+     		padding: 20px;
+     		background: #405580;
+     		border: 1px  solid #FFF;
+     		right: 20px;
+     		top: 60px;
+     		width:50%;
+     		border-radius: 2px 0 2px 2px;
+     	}
+     	nav li{
+     		text-align: center;
+     		width: 100%;
+     		padding: 10px 0;
+     		margin: 0;
+     	}
+     	nav:hover ul{
+     		display: block;
+     	}
+     	section{
+     		float: left;
+     		width: 100%;
+     		margin: 0;
+     		padding: 0;
+     	}
+     	article{
+     		float: left;
+     		width: 100%;
+     		margin: 0;
+     		padding: 0;
+     	}
+     	aside{
+     		float: left;
+     		width: 100%;
+     		margin: 0;
+     		padding: 0;
+
+
+
+
+     	}
+     }
+
+     	
+
+	</style>
+	
+	<script>
+		$(window).load(function() {
+			$('.blueberry').blueberry();
+		});
+	</script>
+
+
+<!-- For Blink text -->
+<style type "text/css">
+<!--
+/* @group Blink */
+.blink {
+  -webkit-animation: blink .75s linear infinite;
+  -moz-animation: blink .75s linear infinite;
+  -ms-animation: blink .75s linear infinite;
+  -o-animation: blink .75s linear infinite;
+   animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-o-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+/* @end */
+-->
+</style>
+
+
+
+</head>
+<body>
+	<header>
+		<a href="#" id="logo"></a> 
+		<nav>
+			<a href="#" id="menu-icon"></a> 
+            <ul>
+            	<li><a href="#" class="current">Home</a></li>
+            	<li><a href="Trainers.html">Trainers</a></li>
+            	<li><a href="Plans.html">Plans</a></li>
+            	<li><a href="Pricing.html">Pricing</a></li>
+            	<li><a href="Facility.html">Facility</a></li>
+            	<li><a href="Contacts.html">Contacts</a></li>
+            </ul>
+		</nav>
+     </header>
+     
+     <div id="doc">
+     	<div id="content">
+     		<div class="blueberry">
+     		  <ul class="slides">
+
+          
+     		<!--<li><img src="img/inside-gym.png" /><li> -->
+        <!--<li><img src="img/push-ups.png" /><li>-->
+       <!-- <li><img src="img/chest-fly.png" /><li>-->
+        <!--<li><img src="img/training.png" /><li>-->
+    <!DOCTYPE html>  
+    <html>  
+    <head>  
+        <meta charset="utf-8" />  
+        <title>My Slider</title>  
+        <style type="text/css">  
+            body {  
+                margin: 0;  
+                background: #e6e6e6;  
+            }  
+            .showSlide {  
+                display: none  
+            }  
+                .showSlide img {  
+                    width: 100%;  
+                }  
+            .slidercontainer {  
+                max-width: 1000px;  
+                position: relative;  
+                margin: auto;  
+            }  
+            .left, .right {  
+                cursor: pointer;  
+                position: absolute;  
+                bottom: :-2%;  
+                width: auto;  
+                padding: 16px;  
+                margin-top: -22px;  
+                color:#2B2D2E;  
+                font-weight: bold;  
+                font-size: 30px;  
+                transition: 0.6s ease;  
+                border-radius: 0 3px 3px 0;  
+            }  
+            .right {  
+                right: 0;  
+                border-radius: 3px 0 0 3px;  
+            }  
+                .left:hover, .right:hover {  
+                    background-color: rgba(115, 115, 115, 0.8);  
+                }  
+            .content {  
+                color: #eff5d4;  
+                font-size: 30px;  
+                padding: 8px 12px;  
+                position: absolute;  
+                top: 10px;  
+                width: 100%;  
+                text-align: center;  
+            }  
+            .active {  
+                background-color: #717171;  
+            }  
+            /* Fading animation */  
+            .fade {  
+                -webkit-animation-name: fade;  
+                -webkit-animation-duration: 1.5s;  
+                animation-name: fade;  
+                animation-duration: 1.5s;  
+            }  
+            @-webkit-keyframes fade {  
+                from {  
+                    opacity: .4  
+                }  
+                to {  
+                    opacity: 1  
+                }  
+            }  
+      
+            @keyframes fade {  
+                from {  
+                    opacity: .4  
+                }  
+                to {  
+                    opacity: 1  
+                }  
+            }  
+        </style>  
+    </head>  
+    <body>  
+        <div class="slidercontainer">  
+            <div class="showSlide fade">  
+                <img src="img/inside-gym.png" />  
+              
+            </div>  
+            <div class="showSlide fade">  
+                <img src="img/push-ups.png" />  
+        
+            </div>  
+      
+            <div class="showSlide fade">  
+                <img src="img/chest-fly.png" />  
+            </div>  
+            <div class="showSlide fade">  
+                <img src="img/training.png" />  
+            </div>  
+            <!-- Navigation arrows -->  
+            <a class="left" onclick="nextSlide(-1)">⏮</a>  
+            <a class="right" onclick="nextSlide(1)">⏭</a>  
+        </div>  
+      
+        <script type="text/javascript">  
+            var slide_index = 1;  
+            displaySlides(slide_index);  
+      
+            function nextSlide(n) {  
+                displaySlides(slide_index += n);  
+            }  
+      
+            function currentSlide(n) {  
+                displaySlides(slide_index = n);  
+            }  
+      
+            function displaySlides(n) {  
+                var i;  
+                var slides = document.getElementsByClassName("showSlide");  
+                if (n > slides.length) { slide_index = 1 }  
+                if (n < 1) { slide_index = slides.length }  
+                for (i = 0; i < slides.length; i++) {  
+                    slides[i].style.display = "none";  
+                }  
+                slides[slide_index - 1].style.display = "block";  
+            }  
+        </script>  
+      
+    </body>  
+    </html>   
+
+
+
+
+
+     		</ul>
+     	</div>
+     </div>
+   </div>
+   <section>
+   	 <img src="./img/trainers.png" />
+   	 <h1>Best Trainers Arround</h1>
+   	  <p>Here The Gym have the best training staff in the tri-state area as we seek out and recruit talented trainers with all the right certifications.Come in today and have a sit down with one of our trainers so we can help you meet your goals in the fastest way possible! </p>
+   </section>
+
+   <section>
+   	 <img src="./img/location.png" />
+   	 <h1>Local & Convinient.</h1>
+   	  <p>Our location sits near the center of four major roadways exits making it very convinient for gym goers and personal training clients to get their workouts in before or after work, even on a short lunch break!</p>
+   </section>
+
+<section>
+   	 <img src="./img/check.png" />
+   	 <h1>Check Us Out-Free!</h1>
+   	  <p>To show how confident we are in our facilities and satisfying the needs of our clients, we offer a free two weeks pass so anyone interested can first get a feel for our gym and decide whether on not they'd like to join. Call or come in today for your free pass!</p>
+   </section>
+   <div class="clear"></div>
+    <article>
+    	<img src="./img/gym-classes.jpg" />
+    </article> 
+    <aside>
+    	<h2>Our Group Class Schedule:</h2>
+    	<ul class="gym">
+    		<li><h3>Studio Cycling at 8 a.m. - 60 minutes</h3></li>
+    		<li><h3>Abs Sculpting at 12 p.m. - 30 minutes</h3></li>
+    		<li><h3>PowerYoga at 10 a.m. - 60 minutes</h3></li>
+    		<li><h3>Boot Camp at 2 p.m. - 30 minutes</h3></li>
+    		<li><h3>Butt Sculpting at 4 p.m - 60 minutes</h3></li>
+    	</ul>
+    </aside>
+    <div class="clear"></div>
+       <section>
+   	 <h1>Ladies Section</h1>
+   	 <img src="./img/ladies-gym.jpg" />
+   	  <p>Included in our facility is a "ladies only" of the gym where women can workout to themselves.</p>
+   </section>
+
+   <section>
+   	 <h1>Gym Floor</h1>
+   	 <img src="./img/gym-floor.jpg" />
+   	  <p>Our gym floor is spacious as they come. Enjoy scenic views from the cardio equipment on the third floor.</p>
+   </section>
+
+   <section>
+   	 <h1>Free Weights</h1>
+   	 <img src="./img/free-weights.jpg" />
+   	  <p>Our free weights section has an extensive collection of dumbells and Olympic plates for body building.</p>
+   </section>
+   <footer>
+        <section>
+           <h3><b>The Gym</b></h3>
+            <p><b>Call:</b><a class="tab blink" href="tel:+919096808648">+919096808648</a><br>
+            <p>Manaji Nagar<br>
+            Narhe, Pune 411041<br></p>
+            <li><a href="#">
+              <a class="tab blink" href="https://www.google.co.in/maps/dir/18.4542356,73.8244967/Royal+Fitness+Club,+Royal+Fitness+Club,+Vishwa+Arcade,+3rd+Floor,+Phase+2,+Near,+Navale+Bridge,+Narhe,+Pune,+Maharashtra+411041/@18.4565884,73.8216139,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc29540c6de23e3:0xf0906619e2bd6cef!2m2!1d73.8232497!2d18.4594446" target="_blank" />Visit On Map 👆🗺 </a><br><br>
+           
+           
+        </section>
+
+   	   <section>
+           <h3>Connect With Us!</h3>
+           <ul class="Social">
+                <a href="#"> 
+                <a href="https://www.facebook.com/" target="_blank"><img src="./img/facebook1.png"  /></a></a>
+               
+ 
+
+                
+                <a href="#">
+                <a href="https://www.googleplus.com/" target="_blank"><img src="./img/googleplus.png" /></a></a> 
+                
+
+                <a href="#">
+                   <a href="https://www.twitter.com/" target="_blank"><img src="./img/twitter1.png" /></a></a> 
+                  
+
+                <a href="#">
+                   <a href="https://www.youtube.com/" target="_blank"><img src="./img/youtube1.png" /></a></a> 
+
+                    <p><b>Email Us:</b><a class="tab blink" href ="https://mail.google.com/mail/" target="_blank">trainer@thegym.com </a></p>
+   	   </section>
+
+        <style>
+a:link {
+    color: #AFEEEE;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #DAA520;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+</style>
+ 
+
+            </ul>
+       </section>
+
+
+
+
+   	   <section>
+   	   	 <img src="./img/weight-lifter.png" />
+   	   </section>
+
+   </footer>
+
+   <footer class="second">
+   	    <p><b><marquee>©Copyright - The Gym,2018.</marquee></b></p>
+   </footer>
+</body>
+</html>
